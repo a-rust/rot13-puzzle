@@ -1,6 +1,5 @@
 # How to access plaintext.py (module in parent directory)
 # Make sure that you have '__init__.py' in your directory, and in the parent directory (all the way up to the module you want to access)
-
 from src.plaintext import *
 import sys
 import os
@@ -12,4 +11,6 @@ def test_generate_string():
     char_list = generate_random_chars()
     plaintext = chars_to_string(char_list)
     for char in char_list:
+        # No need to worry about duplicates, since random.sample returns unique characters
+        #   And our list has only 5 elements, whereas the sample set contains 25 elements
         assert char_list.index(char) == plaintext.find(char)

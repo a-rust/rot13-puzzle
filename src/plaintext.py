@@ -6,7 +6,7 @@ alphabet = ("abcdefghijklmnopqrstuvwxyz")
 
 # Function for generating a random 5-character string using the English alphabet
 def generate_random_chars() -> list:
-    char_list: list[str] = random.sample(alphabet, 25)
+    char_list: list[str] = random.sample(alphabet, 5)
     return char_list
 
 
