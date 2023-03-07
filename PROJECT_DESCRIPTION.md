@@ -81,3 +81,6 @@ I realized that importing a module that imported another module was causing prob
 ## Step 3
 I'm realizing that a remote server for the database may have been a better idea
 * That way, users could interact with an existing database instead of creating their own, which has many prerequisites
+
+Creating the local table within an existing database was pretty straight-forward (at least after learning more about SQLAlchemy)
+* Next step will involve actually filling in the table using user input

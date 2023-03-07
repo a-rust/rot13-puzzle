@@ -1,5 +1,7 @@
 from sqlalchemy import (create_engine, Table, Column,
                         Integer, String, DateTime)
+from sqlalchemy.orm import sessionmaker, declarative_base
+
 
 # Prerequisites before running this python file:
 #   - A Database Management System (ex: MySQL) must be installed and set up on the user's system, along with a user, password, port number, and database
@@ -32,13 +34,26 @@ def create_user_engine(user_url: str):
 user_engine = create_user_engine(user_url)
 
 
-# Function that tests connection to local database
-def connect_to_local_database():
-    try:
-        connection = user_engine.connect()
-        print('Connected to database successfully')
-    except:
-        print('Failed')
+# Creating a new user session with the database
+Session = sessionmaker(bind=user_engine)
+user_session = Session()
+
+# Declaring the base class for our Rot13 class
+Base = declarative_base()
 
 
-connect_to_local_database()
+# Class which contains our table
+#  - id is unique (to identify each puzzle)
+#  - submission_date refers to when the answer was submitted
+#  - ciphertext is the encrypted plaintext using rot13
+#  - plaintext is the randomly generated 5-letter string
+class Rot13(Base):
+    __tablename__ = 'Rot13_test2'
+    id = Column(Integer, primary_key=True)
+    ciphertext = Column(String(5))
+    plaintext = Column(String(5))
+    answer = Column(Integer)
+
+
+# Creating the (empty) table in our database
+Base.metadata.create_all(user_engine)
