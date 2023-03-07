@@ -1,10 +1,23 @@
 # Project Description
-This is a more in-depth page keeping track of my philosophy, outline, and remarks about the project.
+This is a more in-depth page keeping track of my philosophy, outline about the project the project. I also give some design remarks, and some reflections about the process as I work through each step.
+
+# Table of Contents
+- [Project Description](#project-description)
+- [Table of Contents](#table-of-contents)
+  - [Philosophy](#philosophy)
+  - [Outline](#outline)
+  - [Remarks](#remarks)
+  - [Project Structure](#project-structure)
+  - [Reflections](#reflections)
+    - [Step 1](#step-1)
+
 
 ## Philosophy
 The goal of this project is to apply what I have learned regarding:
 * MySQL, the relational database management system
 * SQLAlchemy, the object-relational mapping
+* Unit testing (this idea was first introduced to me when learning Rust, and I now want to apply it using Python)
+  * Will be using the Pytest package
 
 I would also like this project to be simple and interactive.
 
@@ -35,4 +48,22 @@ I would also like this project to be simple and interactive.
 5. Branch for importing user input into the database
 6. Branch for querying data for truth_values, and displaying it
 
+
+## Reflections
+
+### Step 1
+Making the function for randomly generating 5 letter strings was easy.  
+
+I decided to include unit tests to make sure my function (and future functionalities) are working properly
+* So I looked into the Pytest module  
+
+Using Pytest requires creating test_<file_name> files for the functionality of <file_name>.py
+* I wanted to keep these tests in a separate directory
+
+However, importing <file_name> into test_<file_name> was very confusing
+* Coming from Rust, I expected the module system to be pretty straight-forward
+* After a lot of research, I managed to figure things out.
+
+Actually writing the unit test was pretty neat and simple (especially with the assert syntax, whcih I was used to in Rust).
+* I could have easily defined a single function in ./src/plaintext.py to both generate the random list, and then convert it into a string, but I wanted to separate them to get a feel for how unit testing works in Python
 
