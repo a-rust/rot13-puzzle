@@ -10,6 +10,7 @@ This is a more in-depth page keeping track of my philosophy, outline about the p
   - [Project Structure](#project-structure)
   - [Reflections](#reflections)
     - [Step 1](#step-1)
+  - [Step 2](#step-2)
 
 
 ## Philosophy
@@ -62,8 +63,14 @@ Using Pytest requires creating test_<file_name> files for the functionality of <
 
 However, importing <file_name> into test_<file_name> was very confusing
 * Coming from Rust, I expected the module system to be pretty straight-forward
-* After a lot of research, I managed to figure things out.
+* After a lot of research, I managed to figure things out
 
-Actually writing the unit test was pretty neat and simple (especially with the assert syntax, whcih I was used to in Rust).
+Actually writing the unit test was pretty neat and simple (especially with the assert syntax, which I was used to in Rust)
 * I could have easily defined a single function in ./src/plaintext.py to both generate the random list, and then convert it into a string, but I wanted to separate them to get a feel for how unit testing works in Python
 
+## Step 2
+Implementing ROT13 was straight-forward, and so was the unit test to check each edge case.
+
+I realized that importing a module that imported another module was causing problems
+* The fix was to just use the same boilerplate code when importing any module into any other module
+  * I feel like I may be doing things wrong, so I'll have to look into other (successful) ways of importing external directory modules
