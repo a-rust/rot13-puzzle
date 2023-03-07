@@ -11,6 +11,7 @@ This is a more in-depth page keeping track of my philosophy, outline about the p
   - [Reflections](#reflections)
     - [Step 1](#step-1)
   - [Step 2](#step-2)
+  - [Step 3](#step-3)
 
 
 ## Philosophy
@@ -29,8 +30,9 @@ I would also like this project to be simple and interactive.
    * Non-deterministic (i.e., each user is given a random string, and thus a random ciphertext)
 3. Users are asked to submit an alias (an identifier), along with the decrypted plaintext
    * The alias will be a string, and the decrypted plaintext will be a string, but will map to $x\in{\{0,1\}}$ (either for being the correct or incorrect plaintext)
-4. The results will be stored in a database
+4. The results will be stored in a local database
    * 3 columns; alias, plaintext, truth_value
+   * No interaction with remote database
 5. The database will be queried to gather the number of correct and incorrect answers, and will display each in a histogram
 
 ## Remarks
@@ -40,14 +42,15 @@ I would also like this project to be simple and interactive.
   * However, if this were a competition, someone could submit a fake alias and an incorrect plaintext
 * Step 5 in the outline is also arbitrary, and may change
   * The idea is to do something with the data involving queries
+* There is no remote database
+  * Each user will create there own database, and interact with it using this code
 
 ## Project Structure
 1. Branch for generating random plaintext strings
 2. Branch for implementing ROT13 algorithm
-3. Branch for user input/output
-4. Branch for using SQLAlchemy to create a database and table with the specified columns
-5. Branch for importing user input into the database
-6. Branch for querying data for truth_values, and displaying it
+3. Branch for using SQLAlchemy to create a database and table with the specified columns
+4. Branch for importing user input into the database
+5. Branch for querying data for truth_values, and displaying it
 
 
 ## Reflections
@@ -74,3 +77,7 @@ Implementing ROT13 was straight-forward, and so was the unit test to check each 
 I realized that importing a module that imported another module was causing problems
 * The fix was to just use the same boilerplate code when importing any module into any other module
   * I feel like I may be doing things wrong, so I'll have to look into other (successful) ways of importing external directory modules
+
+## Step 3
+I'm realizing that a remote server for the database may have been a better idea
+* That way, users could interact with an existing database instead of creating their own, which has many prerequisites

@@ -1,1 +1,1 @@
-Empty for now, check PROJECT_DESCRIPTION.md for more details
+Empty for now, check the [Project Description](https://github.com/a-rust/rot13_puzzle/blob/main/PROJECT_DESCRIPTION.md) for more details
