@@ -9,7 +9,7 @@ This project:
 * Queries the table to determine puzzle accuracy
 * Displays correct vs incorrect puzzle results
 
-For more details regarding my experience building the project, check the [Project Description](https://github.com/a-rust/rot13_puzzle/blob/main/PROJECT_DESCRIPTION.md)
+For more details regarding my experience building the project, check the [Project Description](https://github.com/a-rust/rot13-puzzle/blob/main/PROJECT_DESCRIPTION.md)
 
 # Demo
 ![Rot13_summary](https://user-images.githubusercontent.com/107306810/223645491-4f5674e9-fa46-47ac-9e7c-e1914554a1c5.png)
@@ -31,7 +31,7 @@ For more details regarding my experience building the project, check the [Projec
 # How to run this project yourself
 1. Clone this repo:
 ```
-git clone https://github.com/a-rust/rot13_puzzle.git
+git clone https://github.com/a-rust/rot13-puzzle.git
 cd rot13_puzzle
 ```  
 1. Load up a DBMS:

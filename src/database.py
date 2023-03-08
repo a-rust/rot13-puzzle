@@ -52,7 +52,7 @@ Base = declarative_base()
 #  - 'plaintext' is the randomly generated 5-letter string
 #  - 'answer' will be whether the plaintext is the decryption of the ciphertext
 #
-# Note that if 'Rot13' already exists, no new table will be created, and the functions that insert rows into the table will insert them into the original table named 'Rot13_test2'
+# Note that if 'Rot13' already exists, no new table will be created, and the functions that insert rows into the table will insert them into the original table named 'Rot13'
 class Rot13(Base):
     __tablename__ = 'Rot13'
     id = Column(Integer, primary_key=True)
@@ -77,7 +77,7 @@ def enter_data_into_table(database_entries: list[list, list, list]):
 enter_data_into_table(create_puzzles())
 
 
-# Function for displaying correct vs incorrect totals through a histogram
+# Function for displaying correct vs incorrect totals through a bar chart
 def get_totals() -> list[int]:
     # Set up query into the Rot13 table
     puzzles = user_session.query(Rot13)
@@ -99,4 +99,5 @@ def statistics(totals: list):
     plotext.show()
 
 
+# Displaying results
 statistics(get_totals())
