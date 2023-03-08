@@ -13,6 +13,7 @@ This is a more in-depth page keeping track of my philosophy, outline about the p
   - [Step 2](#step-2)
   - [Step 3](#step-3)
   - [Step 4](#step-4)
+  - [Step 5](#step-5)
 
 
 ## Philosophy
@@ -34,7 +35,7 @@ I would also like this project to be simple and interactive.
 4. The results will be stored in a local database
    * 3 columns; alias, plaintext, truth_value
    * No interaction with remote database
-5. The database will be queried to gather the number of correct and incorrect answers, and will display each in a histogram
+5. The database will be queried to gather the number of correct and incorrect answers, and will display each in a bar graph
 
 ## Remarks
 
@@ -100,3 +101,13 @@ So far, we have implemented a program that:
 * Imports data using rot13 puzzles
 
 To finish the project, I would like to interact with database table by making some queries, and displaying the results in an interesting way.
+
+## Step 5
+Querying the database was straight-forward
+* I decided to query for correct/incorrect answers
+
+Since this project involves interacting with user input within the terminal, I wanted a display some basic statistics within the terminal as well
+* I came across this super neat python package called [plotext](https://github.com/piccolomo/plotext) that displays graphs within the terminal! Go check it out if you're interested!
+
+I decided to simply keep track of the correct/incorrect answers, and display them in a bar graph
+* Recall that the goal of this project was to focus on using a DBMS (MySQL) and an ORM (SQLAlchemy)
