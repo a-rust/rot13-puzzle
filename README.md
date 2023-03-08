@@ -7,11 +7,13 @@ This was an educational project for me to apply concepts within:
 For more details regarding my experience building the project, check the [Project Description](https://github.com/a-rust/rot13_puzzle/blob/main/PROJECT_DESCRIPTION.md)
 
 # Demo
-![Summary](./images/Rot13_summary.png)  
+![Rot13_summary](https://user-images.githubusercontent.com/107306810/223645491-4f5674e9-fa46-47ac-9e7c-e1914554a1c5.png)
+
 
 ---
 
-![Table](./images/MySQL_table.png)  
+![MySQL_table](https://user-images.githubusercontent.com/107306810/223645606-904a7eb6-5508-4750-8cdb-2f78c545cd58.png)
+
 
 # Dependencies
 * Python 3.11 or greater
