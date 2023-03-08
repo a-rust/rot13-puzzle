@@ -1,8 +1,13 @@
-# ROT13 Puzzle
-This was an educational project for me to apply concepts within:
-* [Standard Query Language (SQL)](https://en.wikipedia.org/wiki/SQL)
-* [Database Management Systems (DBMS)](https://en.wikipedia.org/wiki/Database#Database_management_system)
-* [Object-Relational Mappings (ORM)](https://en.wikipedia.org/wiki/Object%E2%80%93relational_mapping)
+# ROT13 Decryption Database
+This was an educational project for me to learn and apply concepts involving standard query language (SQL), database management systems (DBMS), and object relational mappings (ORM).
+
+## Project Description
+This project:
+* Builds a local database (table) using a DBMS (ex/ MySQL)
+* Generates random [ROT13 decryption](https://en.wikipedia.org/wiki/ROT13) puzzles for the user to answer
+* Inserts the answers into the database table
+* Queries the table to determine puzzle accuracy
+* Displays correct vs incorrect puzzle results
 
 For more details regarding my experience building the project, check the [Project Description](https://github.com/a-rust/rot13_puzzle/blob/main/PROJECT_DESCRIPTION.md)
 
@@ -19,8 +24,8 @@ For more details regarding my experience building the project, check the [Projec
 * Python 3.11 or greater
 * Relational Database Management System (ex/ MySQL, PostgreSQL, SQLite, etc.)
 * Python packages:
-  * Random
   * SQLAchemy
+  * Random
   * Plotext
 
 # How to run this project yourself
