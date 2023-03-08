@@ -3,7 +3,6 @@ from sqlalchemy import (create_engine, Table, Column,
 from sqlalchemy.orm import sessionmaker, declarative_base
 from user_input import create_puzzles
 import plotext
-import numpy as np
 
 
 # Prerequisites before running this python file:
@@ -53,9 +52,9 @@ Base = declarative_base()
 #  - 'plaintext' is the randomly generated 5-letter string
 #  - 'answer' will be whether the plaintext is the decryption of the ciphertext
 #
-# Note that if 'Rot13_test2' already exists, no new table will be created, and the functions that insert rows into the table will insert them into the original table named 'Rot13_test2'
+# Note that if 'Rot13' already exists, no new table will be created, and the functions that insert rows into the table will insert them into the original table named 'Rot13_test2'
 class Rot13(Base):
-    __tablename__ = 'Rot13_puzzles'
+    __tablename__ = 'Rot13'
     id = Column(Integer, primary_key=True)
     ciphertext = Column(String(3))
     plaintext = Column(String(3))
