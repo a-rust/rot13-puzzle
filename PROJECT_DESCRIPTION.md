@@ -12,6 +12,7 @@ This is a more in-depth page keeping track of my philosophy, outline about the p
     - [Step 1](#step-1)
   - [Step 2](#step-2)
   - [Step 3](#step-3)
+  - [Step 4](#step-4)
 
 
 ## Philosophy
@@ -84,3 +85,18 @@ I'm realizing that a remote server for the database may have been a better idea
 
 Creating the local table within an existing database was pretty straight-forward (at least after learning more about SQLAlchemy)
 * Next step will involve actually filling in the table using user input
+
+## Step 4
+Because Python is so confusing when it comes to external directory imports, I refactored my code
+* I combined plaintext.py and ciphertext.py into a single python file, rot13.py
+* I combined test_plaintext.py and test_ciphertext.py into a single python test file, test_rot13.py
+* Everything seemed to work much smoother, and I didn't have to resort to obscure import methods
+
+Implementing the function that creates puzzles involved appending lists inside of a larger list, and handling user input, which wasn't too complicated.
+
+So far, we have implemented a program that:
+* Connects to the user's SQL Database Management System
+* Creates an empty table
+* Imports data using rot13 puzzles
+
+To finish the project, I would like to interact with database table by making some queries, and displaying the results in an interesting way.

@@ -2,6 +2,8 @@ from sqlalchemy import (create_engine, Table, Column,
                         Integer, String, DateTime)
 from sqlalchemy.orm import sessionmaker, declarative_base
 
+from user_input import create_puzzles
+
 
 # Prerequisites before running this python file:
 #   - A Database Management System (ex: MySQL) must be installed and set up on the user's system, along with a user, password, port number, and database
@@ -48,7 +50,7 @@ Base = declarative_base()
 #  - ciphertext is the encrypted plaintext using rot13
 #  - plaintext is the randomly generated 5-letter string
 class Rot13(Base):
-    __tablename__ = 'Rot13_test2'
+    __tablename__ = 'Rot13_test5'
     id = Column(Integer, primary_key=True)
     ciphertext = Column(String(5))
     plaintext = Column(String(5))
@@ -57,3 +59,15 @@ class Rot13(Base):
 
 # Creating the (empty) table in our database
 Base.metadata.create_all(user_engine)
+
+
+# Function to enter in data user submitted from puzzles
+def enter_data_into_table(database_entries: list[list, list, list]):
+    for puzzle in range(0, len(database_entries[0])):
+        puzzle_entry = Rot13(
+            ciphertext=database_entries[0][puzzle], plaintext=database_entries[1][puzzle], answer=database_entries[2][puzzle])
+        user_session.add(puzzle_entry)
+        user_session.commit()
+
+
+enter_data_into_table(create_puzzles())
