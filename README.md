@@ -1,4 +1,6 @@
 # ROT13 Decryption Database
+
+## Overview
 This was an educational project for me to learn and apply concepts involving standard query language (SQL), database management systems (DBMS), and object relational mappings (ORM).
 
 ## Project Description
@@ -40,16 +42,16 @@ cd rot13_puzzle
 mysql -u <user_name> -p
 # Enter password  
 ```
-1. Create a new database:
+2. Create a new database:
 ```
 -- For example, using MySQL
 CREATE DATABASE <database_name>
 ```
-1. Run ./src/database.py:
+3. Run ./src/database.py:
 ```
 python3 ./src/database.py
 ```
-1. Interact with the terminal, and check your database for the full results in the table 'Rot13':
+4. Interact with the terminal, and check your database for the full results in the table 'Rot13':
 ```
 -- For example, using MySQL
 SELECT * FROM Rot13_Puzzles
